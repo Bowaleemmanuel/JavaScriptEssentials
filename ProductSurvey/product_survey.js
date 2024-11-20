@@ -7,6 +7,7 @@ const job = document.getElementById('job').value;
 const designation = document.getElementById('designation').value;
 const productType = document.getElementById('productType').value;
 const feedback = document.getElementById('feedbackText').value;
+const userExperince = document.getElementById('userExperince').value;
 
 const submitButton=document.getElementById('submitBtn');
 submitButton.onclick = submitFeedback;
@@ -19,6 +20,7 @@ document.getElementById('userJob').innerHTML = job;
 document.getElementById('userDesignation').innerHTML = designation;
 document.getElementById('userProductChoice').innerHTML = productType;
 document.getElementById('userFeedback').innerHTML = feedback;
+document.getElementById('userExperince').innerHTML = userExperince;
 document.getElementById('userInfo').style.display = 'block';
 
 }
