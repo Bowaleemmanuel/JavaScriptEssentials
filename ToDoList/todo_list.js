@@ -34,9 +34,23 @@ clearCompletedBtn.addEventListener("click", clearCompletedTasks);
 displayTasks();
 
 function clearAllTasks() {
-    const taskList = document.getElementById('taskList');
-
-    if (taskList) { 
-      taskList.innerHTML = '';
+    // Clear the tasks array
+    tasks = [];
+  
+    // Clear the task list in the DOM
+    taskList.innerHTML = '';
+  
+    // Optional: Clear tasks from local storage if used
+    // localStorage.removeItem('todo-list');
+  }
+  // Ensure the DOM is fully loaded before adding event listeners
+document.addEventListener('DOMContentLoaded', () => {
+    // Other event listeners...
+  
+    // Add event listener for the "Clear All Tasks" button
+    const clearAllTasksBtn = document.getElementById('clearAllTasksBtn');
+    if (clearAllTasksBtn) {
+      clearAllTasksBtn.addEventListener('click', clearAllTasks);
     }
-}
+  });
+  
